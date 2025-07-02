@@ -25,7 +25,8 @@ def main():
     report=summarize_content_ollama(asset_name, extracted_texts[0], model="mistral")
     print(report)
 
-    # report = llm.chatgpt.chatgpt_api.summarize_content_chatgpt(asset_name, extracted_texts[0])
-    print(report)
+    #report = llm.chatgpt.chatgpt_api.summarize_content_chatgpt(asset_name, extracted_texts[0])
+    #print(report)
 
     saveto_json(report, f"{asset_name}_report.json")
+    print('report saved.')
