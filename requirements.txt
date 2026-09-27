@@ -1,0 +1,6 @@
+requests>=2.28
+beautifulsoup4>=4.11
+googlesearch-python>=1.2
+ollama>=0.3
+# optional: only for data_scraper/crawler_selenium.py
+selenium>=4.10

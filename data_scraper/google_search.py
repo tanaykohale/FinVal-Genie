@@ -1,11 +1,11 @@
-# --  Extracting Additional data from URLs using BeautifulSoup and requests
-from googlesearch import search
+"""Top Google result URLs via the `googlesearch-python` package (no browser needed)."""
+
 
 def get_top_links(query, num=5):
+    from googlesearch import search  # imported lazily so tests don't need network libs
+
     return list(search(query, num_results=num))
 
 
 if __name__ == "__main__":
-    asset_name = input("Enter asset name (default: Gold in Mumbai): ") or "Gold in Mumbai"
-    query = f"price of {asset_name}"
-    top_links = get_top_links(query)
+    print(get_top_links("price of Gold in Mumbai"))
